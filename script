@@ -1,0 +1,31 @@
+getwd()
+setwd("/home/stefan/Desktop/Empirical Research Methodology")
+
+data <- read.delim("RExam.dat")
+# data
+# data$
+age <- c(18,19,19,25,19,16,37,82)
+# age[1]
+name <- c('a','b','c','d','e','f','g','h')
+# name
+research <- data.frame (id = name, ages = age)
+# research
+# research$
+# research[1,]
+# research[, c("id",'ages')]
+# research[c(1,2,3),]
+
+# write.table(research, "research.txt", sep = "\t")
+# new_data <- read.delim("research.txt")
+# new_data
+
+research$group <- c(0,0,1,1,1,0,1,'a')
+
+# research[c(1:5),]
+# research
+# 
+research$day <- c(rep(1, 4), rep(2, 4))
+# research
+
+research$group <- factor(research$group, levels = c(0,1), 
+			labels = c("control", "experimental"))
